@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load model dan kolom yang dipakai saat training
-with open("model_logreg.pkl", "rb") as f:
+with open("model_logregg.pkl", "rb") as f:
     model = pickle.load(f)
 
 with open("encoder.pkl", "rb") as f:
