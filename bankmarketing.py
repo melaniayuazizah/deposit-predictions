@@ -31,8 +31,6 @@ if st.button("Prediksi"):
     # Konversi ke dummy dan sesuaikan kolom
     input_dummy = pd.get_dummies(input_data)
     input_dummy = input_dummy.reindex(columns=trained_columns, fill_value=0)
-    # Probability
-    proba = proba = model.predict_proba(input_dummy)[0]
     # Prediksi
     pred = model.predict(input_dummy)[0]
 
@@ -47,8 +45,6 @@ if st.button("Prediksi"):
         "<div style='background-color:#f8d7da;padding:10px;border-radius:5px;color:#721c24;'>"
         "<b>NO </b> - Nasabah tidak akan berlangganan deposito berjangka ❌"
         "</div>", unsafe_allow_html=True)
-        
-    st.write(f"Probabilitas Berlangganan: {proba[1]:.2%}")
 
 
 
